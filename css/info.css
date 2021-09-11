@@ -1,0 +1,40 @@
+.info__wrapper {
+  background-color: var(--first-brand-color);
+}
+.info {
+  padding: 10rem 0;
+  text-align: center;
+}
+.info .img {
+  max-height: 50rem;
+  object-fit: contain;
+}
+.info .item:not(:last-child) {
+  margin-bottom: 15rem;
+}
+@media screen and (min-width: 1024px) {
+  .info .item {
+    position: relative;
+  }
+  .info .item .img {
+    margin-left: 0;
+  }
+  .info .item:nth-child(even) .img {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .info .block {
+    background-color: var(--second-brand-color);
+    width: 50rem;
+    padding: 5rem 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+  .info .item:nth-child(odd) .block {
+    left: 55rem;
+  }
+  .info .item:nth-child(even) .block {
+    right: 55rem;
+  }
+}
